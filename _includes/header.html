@@ -1,0 +1,17 @@
+<aside>
+  <div class="container">
+    <nav>
+      <ul>
+        {% for page in site.pages %} {% if page.link_text %}
+        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.link_text }}</a></li>
+        {% elsif page.title %}
+        <li><a href="{{ page.url | prepend: site.baseurl }}"> {{ page.title }}</a> </li> 
+        {% endif %} {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+<header>
+  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+</header>
